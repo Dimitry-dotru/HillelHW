@@ -8,7 +8,13 @@ alert(resStr);
 
 const inputNum = prompt('Enter five-digit number', '');
 
-let divideNum = '';
-for (i = 0; i < inputNum.length; i++)
-    divideNum += inputNum[i] + ' ';
-alert('Your num >' + inputNum + '\nNew num >' + divideNum);
+if (isNaN(parseInt(inputNum)))
+alert('You entered not a num!');
+else {
+
+    if (inputNum.length != 5) alert('Num isn\'t five digit');
+    else {
+        const splitted = inputNum.split('').join(' ');
+        alert(splitted);
+    }
+}

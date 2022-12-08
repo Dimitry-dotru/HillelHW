@@ -8,24 +8,26 @@
 */
 
 const mathOperation = prompt('Which operation do you want to do?', 'add or sub or mult or div').trim().toLowerCase();
-const firstNum = +prompt('Enter first num', '');
-const secondNum = +prompt('Enter second num', '');
+const firstNum = parseInt(prompt('Enter first num', ''));
+const secondNum = parseInt(prompt('Enter second num', ''));
 
-
-switch (mathOperation) {
-        case 'add':
-            alert(`${firstNum} + ${secondNum} = ${firstNum + secondNum}`);
-            break;
-        case 'sub':
-            alert(`${firstNum} - ${secondNum} = ${firstNum - secondNum}`);
-            break;
-        case 'mult':
-            alert(`${firstNum} * ${secondNum} = ${firstNum * secondNum}`);
-            break;
-        case 'div':
-            alert(`${firstNum} \\ ${secondNum} = ${firstNum / secondNum}`);
-            break;
-        default:
-            alert('Error!');
-            break;
+if (isNaN(firstNum) || isNaN(secondNum)) alert('You entered incorrect numbers!');
+else {
+    switch (mathOperation) {
+            case 'add':
+                alert(`${firstNum} + ${secondNum} = ${firstNum + secondNum}`);
+                break;
+            case 'sub':
+                alert(`${firstNum} - ${secondNum} = ${firstNum - secondNum}`);
+                break;
+            case 'mult':
+                alert(`${firstNum} * ${secondNum} = ${firstNum * secondNum}`);
+                break;
+            case 'div':
+                alert(`${firstNum} \\ ${secondNum} = ${firstNum / secondNum}`);
+                break;
+            default:
+                alert('Error!');
+                break;
+    }
 }
