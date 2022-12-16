@@ -61,4 +61,5 @@ for (let user of users) {
     sum += balance;
     if (balance >= 2000) console.log(user.phone, user.balance);
 }
-console.log('Sum of all balances >', sum);
+
+console.log('Sum of all balances >', sum.toFixed(2));
