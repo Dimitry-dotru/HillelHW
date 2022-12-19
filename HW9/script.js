@@ -56,10 +56,12 @@ for (let i = 100; i <= 200; i++)
 task = document.querySelector(`.f${divNum++} span`);
 
 //заданное число
-const n = 12;
-for (let i = 0; i <= n; i++) {
-    if (i === n) task.innerText += i;
-    else !(n % i) ? task.innerText += i + ', ' : '';
+const n = 13;
+for (let i = 1; i <= n; i++) {
+    if (i === n) 
+        task.innerText += i;
+    else if ( !(n % i) )
+        task.innerText += `${i} ,`;
 }
 
 //!10
