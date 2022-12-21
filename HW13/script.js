@@ -37,7 +37,7 @@ const users = [{
     {
         "index": 4,
         "isActive": true,
-        "balance": "$3,261.65",
+        "balance": "$3,261.64",
         "name": "Mcfadden Horne",
         "gender": "male",
         "phone": "+1 (942) 565-3988",
@@ -46,7 +46,7 @@ const users = [{
     {
         "index": 5,
         "isActive": false,
-        "balance": "$1,790.56",
+        "balance": "$1,790",
         "name": "Suzette Lewis",
         "gender": "female",
         "phone": "+1 (837) 586-3283",
@@ -62,4 +62,4 @@ for (let user of users) {
     sum += balance;
     if (balance >= 2000) console.log(user.phone, user.balance);
 }
-console.log('Sum of all balances >', sum.toFixed(2));
+console.log(new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(sum));
