@@ -55,11 +55,11 @@ const users = [{
 ]
 
 let sum = 0;
-const phoneArray = [];
 for (let user of users) {
     //обираємо або знак долару, або кому
     let balance = parseFloat(user.balance.replace(/[$$,]+/g, ''));
     sum += balance;
     if (balance >= 2000) console.log(user.phone, user.balance);
 }
+
 console.log(new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(sum));
