@@ -1,10 +1,11 @@
-const firstNum = parseInt(prompt('Enter first num', 'your answer here'));
-const secondNum = parseInt(prompt('Enter second num', 'your answer here'));
-const thirdNum = parseInt(prompt('Enter third num', 'your answer here'));
+const firstNum = parseInt(prompt('Enter first num', 'your answer here'), 10);
+const secondNum = parseInt(prompt('Enter second num', 'your answer here'), 10);
+const thirdNum = parseInt(prompt('Enter third num', 'your answer here'), 10);
 
-let counter = 0, summ = 0;
+let counter = 0;
+let summ = 0;
 
-if (!isNaN(firstNum)) {
+if (!Number.isNaN(firstNum)) {
     counter++;
     summ += firstNum;
 }

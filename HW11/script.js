@@ -1,20 +1,17 @@
-const arraySize = parseInt(prompt('Enter size of array', ''));
+const arraySize = parseInt(prompt('Enter size of array', ''), 10);
 
-if (!arraySize || isNaN(arraySize)) alert('Error!');
+if (!arraySize || Number.isNaN(arraySize)) alert('Error!');
 else {
     const array = [];
-    //!array filling
-    for (let i = 0; i < arraySize; i++)
-        array.push(Math.floor(Math.random() * 100));
+    //! array filling
+    for (let i = 0; i < arraySize; i++) { array.push(Math.floor(Math.random() * 100)); }
 
-//     //!array sorting
-    array.sort(function(a, b) {
-        return a - b;
-    })
+    //! array sorting
+    array.sort((a, b) => a - b);
     console.log(array);
-    if (array.length < 5) console.log(`Can't slice array!`);
+    if (array.length < 5) console.log('Can\'t slice array!');
     else {
-        array.splice(2,3)
+        array.splice(2, 3);
         console.log(array);
     }
 }
